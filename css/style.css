@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+header {
+    margin-top: 50px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 40px;
+    border-radius: 50%;
+    padding: 20px;
+    border: 4px solid #e5e5e5;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #2185d0;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.wrap1 {
+    margin-top: 20px;
+}
+
+.wrap1>p {
+    position: relative;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.wrap1>p i {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrap1 .box {
+    height: 20px;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.wrap1 .box p {
+    margin-bottom: 0;
+}
+
+.main {
+    
+}
+
+.main>h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.main>h3:before {
+    content: "";
+    position: absolute;
+    width: 47%;
+    height: 1px;
+    right: 0;
+    top: 50%;
+    background-color: #999;
+}
+
+.main>h3:after {
+    content: "";
+    position: absolute;
+    width: 47%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background-color: #999;
+}
+
+.main .column {
+
+}
+
+.main .column:after,
+.main .alluser:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.main .column li {
+    float: left;
+    text-align: left;
+    width: 23%;
+    margin-right: 2%;
+    padding: 0;
+}
+
+.main .alluser {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.main .alluser li {
+    float: left;
+    text-align: left;
+    width: 23%;
+    margin-right: 2%;
+    padding: 0;
+}
+
+.main .alluser li>div {
+    padding: 20px 15px;
+    border-radius: 5px;
+    border: 1px solid #dededf;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.main .alluser li>div .left i {
+    font-size: 30px;
+    color: #fbfbfb;
+    background-color: #c5c5c5;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.main .alluser li>div:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.main .alluser li>div .left,
+.main .alluser li>div .right {
+    float: left;
+}
+
+.main .alluser li>div .right {
+    padding-left: 15px;
+    margin-top: -7px;
+}
+
+.main .alluser li>div .right:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.main .alluser li>div .right .box {
+    width: 135px;
+}
+
+.main .alluser li>div .right .num {
+    padding: 3px 8px;
+    background-color: #e8e8e8;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.main .alluser li>div .right .num i {
+    font-size: 12px;
+}
+
+.main .alluser li>div .right .num span {
+    font-size: 14px;
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+}
+
+.main .alluser li>div .right .uname {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 26px;
+    padding-left: 5px;
+    width: 40%;
+    outline: none;
+    border: 0;
+}
+
+.main .alluser li>div .right .post {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 0;
+    display: block;
+}
+
+.active {
+    background-color: #2185d0;
+}
+
+.active .num {
+    color: #2185d0;
+}
+
+.active .post {
+    color: #fff !important;
+}
+
+.nactive {
+    background-color: #fff;
+}
+
+.nactive .num {
+    color: #333;
+}
+
+.nactive .post {
+    color: #666 !important;
+}

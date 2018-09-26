@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>座位表</title>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo fa fa-users"></div>
+            <h2>座位表</h2>
+        </header>
+        <div class="wrap1">
+            <p><i class="fa fa-sort-down"></i>使用提示</p>
+            <div class="box">
+                <p>点击学员信息可以来回切换选中效果；</p>
+            </div>
+        </div>
+        <div class="main" id="app">
+            <h3>座位</h3>
+            <div>
+                <ul class="column">
+                    <li class="">1组</li>
+                    <li class="">2组</li>
+                    <li class="">3组</li>
+                    <li class="">4组</li>
+                </ul>
+                <ul class="alluser">
+                    <li class="" v-for="(list,index1) in lists">
+                        <div v-for="(lis,index) in list" :class="{active: lists[index1][index].bool}" @click="onclick(index1,index)">
+                            <div class="left">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="right">
+                                <div class="box">
+                                    <div class="num">
+                                        <i class="fa fa-tv"></i>
+                                        <span>{{lis.seat}}</span>
+                                    </div>
+                                    <input type="text" class="uname" v-model="lis.name">
+                                </div>
+                                <div class="post">
+                                    {{lis.post}}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
